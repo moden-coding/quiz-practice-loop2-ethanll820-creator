@@ -10,5 +10,22 @@ import java.util.*;
 public class App {
     public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
-    }
+
+
+        int highest = 0;
+        int lowest = 1;
+        while (true) {
+            System.out.println("enter a score");
+            int score = Integer.valueOf(scanner.nextLine());
+            if (score == -1) {
+                break;
+            }else if (score >= highest) {
+                highest = score;
+            }else if(score <= lowest) {
+                lowest = score;
+            }
+            
+        }
+        System.out.println("The highest score was: " + highest + "," + "The lowest score was: " + lowest);
+    } 
 }
